@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    
+</head>
+<body>
+    <div style="background-color:#4E7BDF;height: 200px;color:white;font-size: 60px;font-family: Verdana, Geneva, Tahoma, sans-serif;text-align: center;padding-top:100px;">Welcome to Tumor-AI</div>
+    <br><br><br>
+    <form action='/predict' method="post" enctype="multipart/form-data">
+        <div style="text-align: center;">
+            <p style="font-size: 30px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Please upload the brain-tumor image here</p>
+        <input type=file name=file style="margin-left:55px;"><br><br>
+      <button class="button" type=submit value=Upload>Predict</button>
+    </div>
+    
+    
+    
+    </form>
+    {% block body %}
+
+    {% endblock %}
+</body>
+</html>
